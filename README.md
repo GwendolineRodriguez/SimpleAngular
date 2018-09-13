@@ -62,7 +62,7 @@ npm install -g @angular/cli
 
 ## Routing in Angular
 
-#### Set up Angular Router
+### Set up Angular Router
 
 
 You've got to create a app.router.ts :
@@ -89,10 +89,9 @@ then in your app.component.html, put the router-outlet in the DOM(Document Objec
 ```
 
 
-#### Configure routes for your application
+### Configure routes for your application
 
-For each component, you can have a route. Therefore, each time you want to add a specific component to your html page, you just define the route in the app.router.ts, then declare it in your modules, then add it to your html page. For example, if you want to add a TableComponent,  
-You will modify those files like this :  
+For each component, you can have a route. Therefore, each time you want to add a specific component to your html page, you just define the route in the app.router.ts, then declare it in your modules, then add it to your html page. For example, if you want to add a TableComponent, you will modify those files like this :  
 app.router.ts  
 ```javascript
 import { HomeComponent } from './app.component';
