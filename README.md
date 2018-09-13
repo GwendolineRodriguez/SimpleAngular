@@ -67,6 +67,8 @@ npm install -g @angular/cli
 
 You've got to create a app.router.ts :
 ```javascript
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 
 export const router: Routes = [
@@ -75,7 +77,7 @@ export const router: Routes = [
         redirectTo: '/home',
         pathMatch: 'full'
     },
-        {
+    {
         path: '',
         component: HomeComponent
     }
@@ -87,22 +89,46 @@ then in your app.component.html, put the router-outlet in the DOM(Document Objec
 ```javascript
 <router-outlet></router-outlet>
 ```
+Don't forget to import it in your modules as follow
+```javascript
+import { AppRoutes } from './app.router';
 
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+  ],
+  imports: [
+    AppRoutes,
+    BrowserModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
 ### Configure routes for your application
 
 For each component, you can have a route. Therefore, each time you want to add a specific component to your html page, you just define the route in the app.router.ts, then declare it in your modules, then add it to your html page. For example, if you want to add a TableComponent, you will modify those files like this :  
 app.router.ts  
 ```javascript
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './app.component';
 import { TableComponent } from './table.component';
 
 export const router: Routes = [
     {
         path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+    },
+    {
+        path: '',
         component: HomeComponent
     },
-        {
+    {
         path: 'table',
         component: TableComponent
     }
