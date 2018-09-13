@@ -165,5 +165,5 @@ export class AppModule { }
 app.component.html
 ```javascript
 <router-outlet></router-outlet>
-<TableComponent></TableComponent>
+<app-table></app-table>
 ```
