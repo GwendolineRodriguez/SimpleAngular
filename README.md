@@ -1,6 +1,12 @@
 # Simple Angular App
 A simple angular app, with a table, widget, data population, and cool css.
 
+### Launch the app
+```javascript
+npm install
+ng serve
+```
+
 ## Table of Contents
 - [Setup Angular](#setup):
     - [Mac](#mac)
