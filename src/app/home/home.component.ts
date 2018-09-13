@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  showTable: Boolean = true;
+  showChart: Boolean = true;
 
   ngOnInit() {
   }
+
+  toggleTable() {
+    if (this.showTable) {
+      this.showTable = false;
+    } else {
+      this.showTable = true;
+    }
+  }
+
+  toggleChart() {
+    if (this.showChart) {
+      this.showChart = false;
+    } else {
+      this.showChart = true;
+    }
+  }
+
 
 }

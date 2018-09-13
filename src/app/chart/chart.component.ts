@@ -34,13 +34,12 @@ export class ChartComponent implements OnInit {
             borderColor: 'rgba(255,99,132,1)',
             pointBorderColor: '#fff',
             pointBackgroundColor: 'rgba(255,99,132,1)',
-            // pointBorderColor: '#fff',
             data: [25.48, 54.16, 7.61, 8.06, 4.45]
           }
         ]
       },
       options: {
-        responsive: false,
+        responsive: true,
         title: {
           display: true,
           text: 'Distribution in % of world population'

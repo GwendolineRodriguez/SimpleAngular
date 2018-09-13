@@ -1,4 +1,16 @@
 <mat-toolbar color="primary">
   <span>Hello World !</span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button (click)="toggleChart()" color="primary">Show Chart</button>
+  <button mat-raised-button (click)="toggleTable()" color="primary">Show Table</button>
 </mat-toolbar>
-
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <app-chart *ngIf="showChart"></app-chart>
+    </div>
+    <div class="col">
+      <app-table *ngIf="showTable"></app-table>
+    </div>
+  </div>
+</div>
